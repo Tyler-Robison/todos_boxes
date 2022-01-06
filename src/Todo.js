@@ -18,7 +18,7 @@ const Todo = ({ text = 'Be Cool', deleteTodo, editTodo, id, isShowing = false })
             </li>
 
             <button onClick={showEditForm}>Edit</button>
-            <EditTodoForm editTodo={() => editTodo(id)} id={id} />
+            <EditTodoForm editTodo={() => editTodo(id)} />
             <button onClick={deleteTodo}>Delete Todo</button>
 
             
