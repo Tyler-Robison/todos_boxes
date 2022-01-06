@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-const EditTodoForm = ({ editTodo, id }) => {
+const EditTodoForm = ({ editTodo }) => {
     const INITIAL_STATE = {
         text: ''
     }
@@ -20,7 +20,7 @@ const EditTodoForm = ({ editTodo, id }) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log('submit form data', { ...formData})
-        editTodo(id, { ...formData })
+        editTodo({ ...formData })
         setFormData(INITIAL_STATE)
     }
 
