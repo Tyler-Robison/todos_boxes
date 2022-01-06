@@ -1,0 +1,16 @@
+.Box-Container {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.Box {
+    border: 2px solid black;
+}
+
+.Box-Btn {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
