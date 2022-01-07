@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 
-const EditTodoForm = ({ editTodo }) => {
+const EditTodoForm = ({ editTodo, id, showEditForm, placeholder }) => {
     const INITIAL_STATE = {
-        text: ''
+        text: placeholder
     }
 
     const [formData, setFormData] = useState(INITIAL_STATE)
@@ -20,7 +20,8 @@ const EditTodoForm = ({ editTodo }) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log('submit form data', { ...formData})
-        editTodo({ ...formData })
+        editTodo(id, { ...formData })
+        showEditForm()
         setFormData(INITIAL_STATE)
     }
 
@@ -32,7 +33,6 @@ const EditTodoForm = ({ editTodo }) => {
                 <input
                     type='text'
                     id="edit-text"
-                    // placeholder="text"
                     name='text'
                     value={formData.text}
                     onChange={handleChange}

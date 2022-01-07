@@ -30,7 +30,7 @@ it('should add a todo', function () {
 
   const removeButton = todoList.getByText('Delete Todo')
   expect(removeButton).toBeInTheDocument();
-  expect(removeButton.previousSibling).toHaveTextContent('test text')
+  expect(removeButton.previousSibling.previousSibling).toHaveTextContent('test text')
 
   // form should be empty
   expect(todoList.getAllByDisplayValue("")).toHaveLength(1);

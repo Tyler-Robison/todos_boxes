@@ -10,9 +10,10 @@ exports[`matches snapshot 1`] = `
     >
       Be Cool
     </li>
-    <button
-      class="Todo-Btn"
-    >
+    <button>
+      Edit
+    </button>
+    <button>
       Delete Todo
     </button>
   </div>
